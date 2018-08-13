@@ -35,7 +35,7 @@ namespace IndianBank
         /// <summary>
         /// To initialize account balance
         /// </summary>
-        private double _accountBalance = 100000.00;
+        private double _accountBalance = 500.00;
 
         /// <summary>
         /// To initialize mini statement
