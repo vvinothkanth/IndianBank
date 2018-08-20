@@ -2,14 +2,10 @@
 // Title of the Assesment : ATM Functionality
 // Auther                 : Vinoth Kanth
 // Starting Date          : 7/8/2018
-//
 //  This class file is used to perform the basic operation of ATM,
 //  such as withdrawal , deposit, check balance, get mini statement and reset atm pin number.
 // ================================
 
-/// <summary>
-/// The IndianBank NameSpace
-/// </summary>
 namespace IndianBank
 {
     using System;
@@ -35,7 +31,7 @@ namespace IndianBank
         /// <summary>
         /// To initialize account balance
         /// </summary>
-        private double _accountBalance = 100000.00;
+        private double _accountBalance = 15000.00;
 
         /// <summary>
         /// To initialize mini statement
@@ -85,19 +81,9 @@ namespace IndianBank
         /// <returns>boolan value</returns>
         public bool IsAddCustomerDetail( string customerName, int atmPinNumber )
         {
-            bool isAddedOrNot = false;
-            try
-            {
-                _CustomerName = customerName;
-                _AtmPinNumber = atmPinNumber;
-                isAddedOrNot = true;
-            }
-            catch ( ArgumentNullException )
-            {
-                throw new ArgumentNullException();
-            }
-
-            return isAddedOrNot;
+		_CustomerName = customerName;
+		_AtmPinNumber = atmPinNumber;
+		return true;
 
         }
 
