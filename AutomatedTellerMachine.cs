@@ -31,7 +31,11 @@ namespace IndianBank
         /// <summary>
         /// To initialize account balance
         /// </summary>
+
         private double _accountBalance = 15000.00;
+
+        private double _accountBalance = 1500.00;
+
 
         /// <summary>
         /// To initialize mini statement
@@ -81,9 +85,15 @@ namespace IndianBank
         /// <returns>boolan value</returns>
         public bool IsAddCustomerDetail( string customerName, int atmPinNumber )
         {
+
 		_CustomerName = customerName;
 		_AtmPinNumber = atmPinNumber;
 		return true;
+
+
+            _CustomerName = customerName;
+            _AtmPinNumber = atmPinNumber;
+            return true;
 
         }
 
@@ -101,10 +111,6 @@ namespace IndianBank
                 if ( atmPinNumber.Equals( _AtmPinNumber ) && customerName.Contains( _CustomerName ) )
                 {
                     isValidCustomerOrNot = true;
-                }
-                else
-                {
-                    isValidCustomerOrNot = false;
                 }
             }
             catch ( ArgumentException )
